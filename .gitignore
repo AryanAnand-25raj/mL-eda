@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local data and generated artifacts
+data/raw/*
+data/interim/
+data/processed/
+models/
+reports/
+*.pkl
+*.joblib
+
+# Keep directory placeholders
+!data/raw/.gitkeep
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

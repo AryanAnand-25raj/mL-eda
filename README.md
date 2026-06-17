@@ -1,37 +1,110 @@
-# ML & Data Science Practice Notebooks
+# ML and EDA Practice Notebooks
 
-A set of practice notebooks covering the core Python data science stack — NumPy, Pandas, Matplotlib, Seaborn, and basic supervised learning with Scikit-learn. This is learning material, not a finished analysis or production project.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## What's actually in here
+A curated collection of beginner-friendly notebooks for practicing exploratory data analysis, visualization, and introductory machine learning with the Python data science stack.
 
-| Notebook | Topics covered |
-|---|---|
-| `ADVANCE_PYTHON(NUMPY).ipynb` | Array creation, indexing, slicing, boolean masking, broadcasting, universal functions (sqrt, exp, log, trig), reshaping |
-| `ADVANCE_PYTHON{PANDAS}.ipynb` | Series and DataFrame basics, indexing, arithmetic on Series, dictionaries to Series |
-| `ADVANCE_PYTHON[MATPLOTLIB].ipynb` | Basic line plots, labeling/limits, figure/axes objects, subplots, styling (color, linewidth, linestyle) |
-| `ADVANCE_PYTHON[SEABORN].ipynb` | Scatter plots, rug plots, distribution plots (`displot`, `kdeplot`), count plots on a sales dataset |
-| `ADVANCE_PYTHON[LINEAR_REGRESSION].ipynb` | Manual polynomial curve fitting with `np.polyfit` on an advertising dataset, comparing degree 1–3 fits |
-| `ADVANCE_PYTHON[SKITLEARN].ipynb` | Linear regression using `sklearn.linear_model.LinearRegression`, train/test split, coefficient inspection |
-| `ADVANCE_PYTHON[LOGISTIC_REGRESSION].ipynb` | Logistic regression on a hearing-test dataset, sigmoid function, train/test split, prediction |
+The repository is organized as a learning portfolio: each notebook focuses on one topic, starts from core concepts, and gradually moves toward simple supervised learning workflows.
 
-There is no exploratory data analysis project here despite the repo name — these are sequential tutorial-style exercises with no markdown explanations. Each notebook is essentially "import library → run a series of commands."
+## Topics Covered
 
-## Known issues (read before you try to run anything)
+| Notebook | Focus area |
+| --- | --- |
+| [`01_numpy.ipynb`](notebooks/01_numpy.ipynb) | NumPy arrays, indexing, slicing, broadcasting, reshaping, and universal functions |
+| [`02_pandas.ipynb`](notebooks/02_pandas.ipynb) | Pandas Series, DataFrames, indexing, arithmetic, and dictionary-based data creation |
+| [`03_matplotlib.ipynb`](notebooks/03_matplotlib.ipynb) | Line plots, labels, limits, figure/axes objects, subplots, and plot styling |
+| [`04_seaborn.ipynb`](notebooks/04_seaborn.ipynb) | Scatter plots, rug plots, distribution plots, KDE plots, and count plots |
+| [`05_linear_regression_numpy.ipynb`](notebooks/05_linear_regression_numpy.ipynb) | Polynomial curve fitting with NumPy on an advertising dataset |
+| [`06_linear_regression_sklearn.ipynb`](notebooks/06_linear_regression_sklearn.ipynb) | Linear regression with Scikit-learn, train/test split, coefficients, and regression metrics |
+| [`07_logistic_regression.ipynb`](notebooks/07_logistic_regression.ipynb) | Logistic regression, sigmoid intuition, classification metrics, and confusion matrix display |
 
-- **Datasets are not included.** Notebooks reference `Advertising.csv`, `hearing_test.csv`, and `dm_office_sales.csv`, but none of these files are in the repo.
-- **File paths are hardcoded to a local Windows machine** (e.g. `C:\Users\ASUS\OneDrive\Documents\Desktop\datasets_python\...`). Nothing will run as-is on another computer.
-- **No `requirements.txt`.** Library versions used (numpy, pandas, matplotlib, seaborn, scikit-learn) are not pinned.
-- **No model evaluation in most cases** — predictions are generated but accuracy/error metrics are largely not computed or shown.
-- One filename has a typo: `ADVANCE_PYTHON[SKITLEARN].ipynb` should be `SKLEARN`.
+## Repository Structure
 
-## To actually run these
+```text
+.
++-- data/
+|   +-- raw/                  # Place local CSV datasets here
++-- notebooks/                # Numbered Jupyter notebooks
++-- .gitattributes            # Keeps notebook diffs readable on GitHub
++-- .gitignore                # Ignores caches, virtual environments, and local data
++-- LICENSE
++-- README.md
++-- requirements.txt
+```
 
-1. Clone the repo.
-2. Install dependencies: `pip install numpy pandas matplotlib seaborn scikit-learn jupyter`
-3. Source your own copies of `Advertising.csv`, `hearing_test.csv`, and `dm_office_sales.csv` (these are common files from intro ML courses, e.g. Pierian Data's Python for Data Science course).
-4. Replace the hardcoded file paths in each notebook with wherever you put those CSVs.
-5. Run with Jupyter Notebook or JupyterLab.
+## Getting Started
 
-## Why this repo exists
+### 1. Clone the repository
 
-This is a personal practice log while learning the data science / ML stack — not a portfolio-ready analysis project. If you're looking for applied EDA or ML work, this isn't it yet.
+```bash
+git clone https://github.com/AryanAnand-25raj/mL-eda.git
+cd mL-eda
+```
+
+### 2. Create and activate a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+On Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+On macOS/Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Add datasets
+
+Some notebooks use CSV files that are not committed to the repository. Add them locally inside `data/raw/`:
+
+```text
+data/raw/
++-- Advertising.csv
++-- dm_office_sales.csv
++-- hearing_test.csv
+```
+
+These files are intentionally ignored by Git so local datasets and course files do not get uploaded by accident.
+
+### 5. Start Jupyter
+
+```bash
+jupyter lab
+```
+
+Open the notebooks from the `notebooks/` directory and run them in order.
+
+## Project Status
+
+This is an educational notebook repository, not a deployed machine learning application. It is best used for:
+
+- revising Python data analysis basics;
+- practicing visualization workflows;
+- understanding simple regression and classification examples;
+- building a foundation for more complete EDA and ML portfolio projects.
+
+## Suggested Next Improvements
+
+- Add markdown explanations before major code sections.
+- Add dataset source links and data dictionaries.
+- Include evaluation summaries for each model notebook.
+- Convert repeated workflows into reusable Python scripts.
+- Add a complete end-to-end EDA project using one public dataset.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
