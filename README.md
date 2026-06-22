@@ -67,6 +67,16 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Verify that the core data-science packages are available:
+
+```bash
+python -c "import numpy, pandas, matplotlib, seaborn, sklearn; print('Environment ready')"
+```
+
+If the command prints `Environment ready`, the notebooks have the packages they
+need. If an import fails, activate the virtual environment again and rerun the
+installation command.
+
 ### 4. Add datasets
 
 Some notebooks use CSV files that are not committed to the repository. Add them locally inside `data/raw/`:
