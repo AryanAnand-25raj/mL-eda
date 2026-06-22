@@ -115,6 +115,11 @@ This is an educational notebook repository, not a deployed machine learning appl
 - Convert repeated workflows into reusable Python scripts.
 - Add a complete end-to-end EDA project using one public dataset.
 
+## Contributing
+
+Improvements are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before
+opening an issue or pull request.
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
